@@ -19,17 +19,6 @@
 </div>
 
 ---
-
-## 📖 Table of Contents
-
-1. [System Architecture](#1-system-architecture)
-2. [Core AI & Machine Learning Engine](#2-core-ai--machine-learning-engine)
-3. [Backend State Management & Integration](#3-backend-state-management--integration)
-4. [Generative AI Incident Reporting](#4-generative-ai-incident-reporting)
-5. [Repository Structure](#5-repository-structure)
-6. [API Specifications](#6-api-specifications)
-7. [Judging & Live Deployment Guide](#7-judging--live-deployment-guide)
-
 ---
 
 ## 1. 🏗️ System Architecture
