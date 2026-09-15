@@ -5,11 +5,14 @@ import requests
 import threading
 from ultralytics import YOLO
 from decision_engine import EvacuationPlanner
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
 # Configuration
-IP_CAMERA_URL = "http://192.168.1.8:4747/video"
-API_URL = "https://attribute-unharmed-crawlers.ngrok-free.dev/api/Detection/"
+IP_CAMERA_URL = os.getenv("IP_CAMERA_URL")
+API_URL = os.getenv("BACKEND_API_URL")
 LOG_FILENAME = "ai_log_data.jsonl"
 
 
@@ -57,7 +60,7 @@ def process_zone(frame, people_model, hazard_model, zone_id, counters, planner, 
 
             if "fire" in detected_class and conf >= 0.45:
                 fire_boxes.append((x1, y1, x2, y2))
-            elif "smoke" in detected_class and conf >= 0.60:
+            elif "smoke" in detected_class and conf >= 0.75:
                 smoke_boxes.append((x1, y1, x2, y2))
 
     # Sticky Memory Filter (Anti-flickering)
@@ -214,7 +217,7 @@ def main():
             data_log_file.flush()
 
             # Async Payload Transmission
-            if frame_counter % 10 == 0:
+            if frame_counter % 20 == 0:
                 try:
                     requests.post(API_URL, json=state_A, timeout=0.5)
                     if success_B and frame_B is not None:
