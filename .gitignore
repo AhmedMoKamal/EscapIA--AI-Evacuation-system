@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+# User-specific configuration
+appsettings.Development.json
+
+# Secrets / local settings
+appsettings.Local.json
+
+# Environment files
+.env
+.env.*
+
+# Publish output
+publish/
+# Visual Studio publish profiles
+Properties/PublishProfiles/

@@ -1,0 +1,6 @@
+@ESCAPIA_HostAddress = http://localhost:5261
+
+GET {{ESCAPIA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
