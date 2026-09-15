@@ -194,9 +194,9 @@ ESCAPIA_WORKSPACE/
 | `GET` | `/api/Build` | Retrieves current Building State |
 | `GET` | `/api/Incidents/{id}/report` | Fetches AI-Generated Incident Report |
 | `GET` | `/api/Incidents/incidents` | Lists Historical Incidents |
-| `POST` | `/api/Auth` | User/Admin Authentication (JWT) |
+| `GET` | `/api/Auth` | User/Admin Authentication (JWT) |
 | `POST` | `/api/Auth` | Login |
-| `POST` | `/api/Incidents/incidents` | Incidents |
+| `GET` | `/api/Incidents/incidents` | Incidents |
 
 ### AI Outbound Payload (Sent to `/api/Detection`)
 
