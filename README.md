@@ -113,7 +113,7 @@ The **ASP.NET Core 8** backend acts as the central nervous system, bridging AI i
 ```text
 ESCAPIA_WORKSPACE/
 │
-├── AI_PERCEPTION_NODE/                      # Python Vision & ML Engine
+├── ESCAPIA-AI/                              # Python Vision & ML Engine
 │   ├── main.py                              # Core perception and routing loop
 │   ├── decision_engine.py                   # XGBoost & NetworkX routing logic
 │   ├── report_generator.py                  # FastAPI Generative AI microservice
@@ -124,7 +124,7 @@ ESCAPIA_WORKSPACE/
 │   ├── xgb_risk_model.json                  # Compiled risk weights
 │   └── .env                                 # Local API keys and URLs
 │
-├── BACKEND_CORE/                            # ASP.NET Core 8 API
+├── ESCAPIA-AI-BACKEND/                            # ASP.NET Core 8 API
 │   ├── Controllers/
 │   │   ├── AuthController.cs
 │   │   ├── DetectionController.cs
@@ -195,6 +195,8 @@ ESCAPIA_WORKSPACE/
 | `GET` | `/api/Incidents/{id}/report` | Fetches AI-Generated Incident Report |
 | `GET` | `/api/Incidents/incidents` | Lists Historical Incidents |
 | `POST` | `/api/Auth` | User/Admin Authentication (JWT) |
+| `POST` | `/api/Auth` | Login |
+| `POST` | `/api/Incidents/incidents` | Incidents |
 
 ### AI Outbound Payload (Sent to `/api/Detection`)
 
