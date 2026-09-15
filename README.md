@@ -113,32 +113,73 @@ The **ASP.NET Core 8** backend acts as the central nervous system, bridging AI i
 ```text
 ESCAPIA_WORKSPACE/
 │
-├── AI_PERCEPTION_NODE/          # Python Vision & ML Engine
-│   ├── main.py                 # Core perception and routing loop
-│   ├── decision_engine.py      # XGBoost & NetworkX routing logic
-│   ├── report_generator.py     # FastAPI Generative AI microservice
-│   ├── train_risk_model.py     # XGBoost training script
-│   ├── requirements.txt        # Python dependencies
-│   ├── best.pt                 # Fine-tuned Fire/Smoke model
-│   ├── yolo11n.pt              # YOLO11 Nano model
-│   ├── xgb_risk_model.json     # Compiled risk weights
-│   └── .env                    # Local API keys and URLs
+├── AI_PERCEPTION_NODE/                      # Python Vision & ML Engine
+│   ├── main.py                              # Core perception and routing loop
+│   ├── decision_engine.py                   # XGBoost & NetworkX routing logic
+│   ├── report_generator.py                  # FastAPI Generative AI microservice
+│   ├── train_risk_model.py                  # XGBoost training script
+│   ├── requirements.txt                     # Python dependencies
+│   ├── best.pt                              # Fine-tuned Fire/Smoke model
+│   ├── yolo11n.pt                           # YOLO11 Nano model
+│   ├── xgb_risk_model.json                  # Compiled risk weights
+│   └── .env                                 # Local API keys and URLs
 │
-└── BACKEND_CORE/               # ASP.NET Core 8 API
-    ├── Controllers/
-    │   ├── AuthController.cs
-    │   ├── DetectionController.cs
-    │   ├── BuildingController.cs
-    │   └── IncidentController.cs
-    ├── Services/
-    │   ├── DetectionService.cs
-    │   ├── BuildingStateService.cs
-    │   └── TwilioService.cs
-    ├── Hubs/
-    │   └── BuildingHub.cs      # SignalR Websockets
-    ├── Data/
-    │   └── ApplicationDb.cs
-    └── Models/ & DTOs/
+├── BACKEND_CORE/                            # ASP.NET Core 8 API
+│   ├── Controllers/
+│   │   ├── AuthController.cs
+│   │   ├── DetectionController.cs
+│   │   ├── BuildingController.cs
+│   │   └── IncidentController.cs
+│   ├── Services/
+│   │   ├── AuthService.cs
+│   │   ├── DetectionService.cs
+│   │   ├── BuildingStateService.cs
+│   │   ├── IncidentReportService.cs
+│   │   └── TwilioService.cs
+│   ├── DTOs/
+│   ├── Models/
+│   ├── Data/
+│   │   └── ApplicationDb.cs
+│   ├── Hubs/
+│   │   └── BuildingHub.cs                   # SignalR Real-Time Hub
+│   └── Extensions/
+│       └── AuthenticationExtensions.cs
+│
+└── EscaplA-flutter/                         # Cross-Platform Flutter Client App
+    ├── android/                             # Android native configuration & build files
+    │   ├── app/
+    │   │   └── src/
+    │   │       ├── debug/AndroidManifest.xml
+    │   │       ├── main/ (kotlin, res, AndroidManifest.xml)
+    │   │       └── profile/build.gradle.kts
+    │   └── gradle/wrapper/
+    ├── assets/images/                       # UI Image Assets & Logos
+    │   ├── circles.png
+    │   ├── escapia_app_logo.png
+    │   ├── escapia_logo_transparent.png
+    │   └── quarter_circles.png
+    ├── ios/                                 # iOS native setup & Xcode project files
+    │   ├── Flutter/ (Configs & .plist)
+    │   ├── Runner.xcodeproj/
+    │   ├── Runner.xcworkspace/
+    │   ├── Runner/
+    │   └── RunnerTests/
+    ├── lib/                                 # Main Flutter source directory
+    │   ├── core/                            # Core themes, configurations & utilities
+    │   ├── features/                        # Modular feature implementations
+    │   └── main.dart                        # Application entry point
+    ├── test/                                # Testing suite
+    │   └── widget_test.dart
+    ├── web/                                 # Web hosting support & favicons
+    │   ├── icons/
+    │   ├── splash/img/
+    │   ├── favicon.png
+    │   ├── index.html
+    │   └── manifest.json
+    ├── .metadata                            # Flutter metadata configuration
+    ├── analysis_options.yaml                # Static analysis linter rules
+    ├── pubspec.yaml                         # Flutter package dependencies & assets binding
+    └── pubspec.lock                         # Locked dependency versions
 ```
 
 ---
