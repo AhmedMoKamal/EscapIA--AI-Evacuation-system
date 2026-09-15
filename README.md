@@ -219,7 +219,7 @@ For evaluators and judges reviewing the live system, follow these steps to execu
 
 ```env
 GEMINI_API_KEY="your_google_gemini_key"
-BACKEND_API_URL="http://[your_backend_domain]/api/Detection/"
+BACKEND_API_URL="http://mariamrishdi67-001-site1.ltempurl.com/api/Detection/"
 IP_CAMERA_URL="http://[mobile_ip_webcam]:4747/video"
 ```
 
