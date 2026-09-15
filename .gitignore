@@ -20,5 +20,16 @@ appsettings.Local.json
 
 # Publish output
 publish/
+
 # Visual Studio publish profiles
 Properties/PublishProfiles/
+
+# Python
+venv/
+__pycache__/
+
+# AI logs / local files
+ai_log_data.jsonl
+
+# Local tools
+ngrok.exe
