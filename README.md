@@ -72,7 +72,7 @@ graph TD;
 
 ### 2.3 Multithreaded I/O & Telemetry
 
-- **Reduced-Latency Streaming:** A custom threaded `CameraStream` class decouples frame capture from model inference, bypassing OpenCV's internal buffer backlog to maintain high FPS across both Local Webcam (Zone 1) and IP Camera (Zone 2) feeds.
+- * **Reduced-Latency Streaming:** A custom threaded `CameraStream` class decouples frame capture from model inference, bypassing OpenCV's internal buffer backlog to maintain high FPS across a **dual-source setup: Zone 1 (Built-in Laptop Webcam) and Zone 2 (Mobile Phone camera streamed via DroidCam / IP Webcam app)**.
 - **Resilient Transmission:** Pushes JSON telemetry to the backend every 30 frames. Wrapped in `try/except` with a strict `timeout=0.5s`, ensuring a slow or unreachable backend never blocks the critical real-time camera loop.
 - **Data Auditing:** Persists frame-by-frame telemetry locally to a `.jsonl` file for offline analysis.
 
@@ -220,7 +220,7 @@ For evaluators and judges reviewing the live system, follow these steps to execu
 ```env
 GEMINI_API_KEY="your_google_gemini_key"
 BACKEND_API_URL="http://mariamrishdi67-001-site1.ltempurl.com/api/Detection/"
-IP_CAMERA_URL="http://[mobile_ip_webcam]:4747/video"
+IP_CAMERA_URL="http://[YOUR_MOBILE_IP_WEBCAM_OR_DROIDCAM_IP]:4747/video""
 ```
 
 ### Step 2: Launch the AI Reporting Microservice
