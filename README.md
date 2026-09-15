@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚨 ESCAPIA-AI 🚨
+# 🚨 ESCAPIA - AI Emergency Evacuation🚨
 **Real-Time AI Emergency Evacuation & Dynamic Routing System**
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
