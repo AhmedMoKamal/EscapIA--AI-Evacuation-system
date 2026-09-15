@@ -58,7 +58,6 @@ class StatCard extends StatelessWidget {
                   style: AppTextStyles.font16W400White54,
                 ),
                 SizedBox(height: context.space(18)),
-                // FittedBox يمنع الـ Overflow تماماً ويصغر النص والبادج تلقائياً عند تصغير الشاشة
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   alignment: Alignment.centerLeft,

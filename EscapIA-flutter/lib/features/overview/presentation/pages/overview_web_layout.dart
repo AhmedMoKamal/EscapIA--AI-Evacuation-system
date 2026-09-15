@@ -35,13 +35,11 @@ class OverviewWebLayout extends StatelessWidget {
       mallStatusText = 'Fire';
       mallStatusColor = AppColors.criticalCrimson;
       mallStatusIcon = Icons.local_fire_department_rounded;
-      // جلب الريسك الخاص بمنطقة الحريق من الباك
       riskLevel = data.firstWhere((z) => z.fireDetected).riskLevel;
     } else if (hasSmoke) {
       mallStatusText = 'Smoke';
       mallStatusColor = AppColors.warningAmber;
       mallStatusIcon = Icons.cloud_outlined;
-      // جلب الريسك الخاص بمنطقة الدخان من الباك
       riskLevel = data.firstWhere((z) => z.smokeDetected).riskLevel;
     } else {
       mallStatusText = 'Normal';
@@ -55,7 +53,7 @@ class OverviewWebLayout extends StatelessWidget {
         icon: mallStatusIcon,
         title: 'Mall Status',
         value: mallStatusText,
-        riskLevel: riskLevel, // تمرير الريسك القادم من الباك
+        riskLevel: riskLevel,
         valueColor: mallStatusColor,
         borderColor: mallStatusColor,
         backgroundColor: mallStatusColor.withOpacity(0.12),

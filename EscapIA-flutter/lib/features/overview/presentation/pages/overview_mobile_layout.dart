@@ -31,7 +31,6 @@ class OverviewMobileLayout extends StatelessWidget {
               child: MapCard(zones: data),
             ),
           ] else ...[
-            // تم حذف SizedBox(320) فقط لمنع الـ Overflow
             ActiveIncidentsPanel(zones: data),
             SizedBox(height: context.space(16)),
             SizedBox(
