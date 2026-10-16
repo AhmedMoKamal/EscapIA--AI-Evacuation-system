@@ -20,7 +20,6 @@
 🌐 **[Explore Live Web Dashboard](https://escapia-d1654.web.app/#/overview)**  
 🎥 **[Watch Live Demo Video (Google Drive)](YOUR_GOOGLE_DRIVE_VIDEO_LINK_HERE)**  
 📄 **[Download System Documentation (PDF)](YOUR_PDF_DOCUMENTATION_LINK_HERE)**
-
 📓 **[Explore Notion Documentation & Planning](https://app.notion.com/p/Clavis-Victoris-3c67c11860508026b15be241fa5d52a3)**
 
 </div>
